@@ -1,59 +1,92 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boston Housing Price Prediction</title>
-</head>
-<body>
-    <h2>Boston Housing Price Prediction</h2>
-    <form action="/predict" method="post">
-        <label for="crim">CRIM:</label><br>
-        <input type="text" id="crim" name="crim"><br>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <h2 class="h-2">Boston Housing Price Prediction</h2>
+    <div class="form-1">
+      <form action="/predict" method="post" class="grid-form">
 
-        <label for="zn">ZN:</label><br>
-        <input type="text" id="zn" name="zn"><br>
+        <div class="form-group">
+          <label for="crim">CRIM:</label>
+          <input type="text" id="crim" name="crim" />
+        </div>
 
-        <label for="indus">INDUS:</label><br>
-        <input type="text" id="indus" name="indus"><br>
+        <div class="form-group">
+          <label for="zn">ZN:</label>
+          <input type="text" id="zn" name="zn" />
+        </div>
 
-        <label for="chas">CHAS:</label><br>
-        <input type="text" id="chas" name="chas"><br>
+        <div class="form-group">
+          <label for="indus">INDUS:</label>
+          <input type="text" id="indus" name="indus" />
+        </div>
 
-        <label for="nox">NOX:</label><br>
-        <input type="text" id="nox" name="nox"><br>
+        <div class="form-group">
+          <label for="chas">CHAS:</label>
+          <input type="text" id="chas" name="chas" />
+        </div>
 
-        <label for="rx">RX:</label><br>
-        <input type="text" id="rx" name="rx"><br>
+        <div class="form-group">
+          <label for="nox">NOX:</label>
+          <input type="text" id="nox" name="nox" />
+        </div>
 
-        <label for="age">AGE:</label><br>
-        <input type="text" id="age" name="age"><br>
+        <div class="form-group">
+          <label for="rx">RX:</label>
+          <input type="text" id="rx" name="rx" />
+        </div>
 
-        <label for="dis">DIS:</label><br>
-        <input type="text" id="dis" name="dis"><br>
+        <div class="form-group">
+          <label for="age">AGE:</label>
+          <input type="text" id="age" name="age" />
+        </div>
 
-        <label for="rad">RAD:</label><br>
-        <input type="text" id="rad" name="rad"><br>
+        <div class="form-group">
+          <label for="dis">DIS:</label>
+          <input type="text" id="dis" name="dis" />
+        </div>
 
-        <label for="tax">TAX:</label><br>
-        <input type="text" id="tax" name="tax"><br>
+        <div class="form-group">
+          <label for="rad">RAD:</label>
+          <input type="text" id="rad" name="rad" />
+        </div>
 
-        <label for="ptratio">PTRATIO:</label><br>
-        <input type="text" id="ptratio" name="ptratio"><br>
+        <div class="form-group">
+          <label for="tax">TAX:</label>
+          <input type="text" id="tax" name="tax" />
+        </div>
 
-        <label for="black">BLACK:</label><br>
-        <input type="text" id="black" name="black"><br>
+        <div class="form-group">
+          <label for="ptratio">PTRATIO:</label>
+          <input type="text" id="ptratio" name="ptratio" />
+        </div>
 
-        <label for="lstat">LSTAT:</label><br>
-        <input type="text" id="lstat" name="lstat"><br><br>
+        <div class="form-group">
+          <label for="black">BLACK:</label>
+          <input type="text" id="black" name="black" />
+        </div>
 
-        <!-- ✅ Add this submit button -->
-        <input type="submit" value="Predict">
-    </form>
+        <div class="form-group">
+          <label for="lstat">LSTAT:</label>
+          <input type="text" id="lstat" name="lstat" />
+        </div>
 
-    <!-- ✅ Optional: display prediction text -->
-    {% comment %} {% if prediction_text %}
+        <div class="form-group submit-wrapper">
+          <input type="submit" value="Predict" class= "submit-btn"/>
+        </div>
+      </form>
+
+      {% if prediction_text %}
+      <div class="output">
         <h3>{{ prediction_text }}</h3>
-    {% endif %} {% endcomment %}
-</body>
+      </div>
+      {% endif %}
+    </div>
+  </body>
 </html>

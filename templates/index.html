@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boston Housing Price Prediction</title>
+</head>
+<body>
+    <h2>Boston Housing Price Prediction</h2>
+    <form action="/predict" method="post">
+        <label for="crim">CRIM:</label><br>
+        <input type="text" id="crim" name="crim"><br>
+
+        <label for="zn">ZN:</label><br>
+        <input type="text" id="zn" name="zn"><br>
+
+        <label for="indus">INDUS:</label><br>
+        <input type="text" id="indus" name="indus"><br>
+
+        <label for="chas">CHAS:</label><br>
+        <input type="text" id="chas" name="chas"><br>
+
+        <label for="nox">NOX:</label><br>
+        <input type="text" id="nox" name="nox"><br>
+
+        <label for="rx">RX:</label><br>
+        <input type="text" id="rx" name="rx"><br>
+
+        <label for="age">AGE:</label><br>
+        <input type="text" id="age" name="age"><br>
+
+        <label for="dis">DIS:</label><br>
+        <input type="text" id="dis" name="dis"><br>
+
+        <label for="rad">RAD:</label><br>
+        <input type="text" id="rad" name="rad"><br>
+
+        <label for="tax">TAX:</label><br>
+        <input type="text" id="tax" name="tax"><br>
+
+        <label for="ptratio">PTRATIO:</label><br>
+        <input type="text" id="ptratio" name="ptratio"><br>
+
+        <label for="black">BLACK:</label><br>
+        <input type="text" id="black" name="black"><br>
+
+        <label for="lstat">LSTAT:</label><br>
+        <input type="text" id="lstat" name="lstat"><br><br>
+
+        <!-- ✅ Add this submit button -->
+        <input type="submit" value="Predict">
+    </form>
+
+    <!-- ✅ Optional: display prediction text -->
+    {% comment %} {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %} {% endcomment %}
+</body>
+</html>
